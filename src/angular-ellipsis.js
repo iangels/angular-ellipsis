@@ -36,7 +36,7 @@ angular.module('dibari.angular-ellipsis',[])
 					attributes.isTruncated = false;
 
 				function buildEllipsis() {
-					if (typeof(scope.ngBind) !== 'undefined') {
+					if (typeof(scope.ngBind) !== 'undefined' || scope.ngBind !== null ) {
 						var bindArray = scope.ngBind.split(" "),
 							i = 0,
 							ellipsisSymbol = (typeof(attributes.ellipsisSymbol) !== 'undefined') ? attributes.ellipsisSymbol : '&hellip;',
